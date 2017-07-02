@@ -34,9 +34,9 @@
         frame_container.style.zIndex = 500;
         // position
         frame_container.style.position = "fixed";
-        frame_container.style.width = "100%"; //body_width;
+        frame_container.style.width = body_width + "px"; //"100%"; //body_width;
         frame_container.style.minWidth = "500px";
-        frame_container.style.height = "100%"; //body_height;
+        frame_container.style.height = body_height + "px";//"100%"; //body_height;
         frame_container.style.minHeight = "500px";
         frame_container.style.opacity = 0.8;
         frame_container.style.margin = "20px";
