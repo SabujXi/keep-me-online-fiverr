@@ -20,25 +20,22 @@
     frame_container.appendChild(frame);
     button_container.appendChild(cross_toggle_button);
     
-    // Toggle controller
-    cross_toggle_button.onclick = function(){
-        
+    function containerStateToggler(){
         if (toggled_full === true){
             prepareFrameContainerCollapsed();
         }else{
             prepareFrameContainerFull();
         }
-    };
+    }
+    // Toggle controller
+    cross_toggle_button.onclick = containerStateToggler;
     
     // preparing the frame container
         // set z index
         frame_container.style.zIndex = 999999;
         // position
         frame_container.style.position = "fixed";
-        frame_container.style.width = body_width + "px"; //"100%"; //body_width;
-        frame_container.style.minWidth = "500px";
-        frame_container.style.height = body_height + "px";//"100%"; //body_height;
-        frame_container.style.minHeight = "500px";
+    
         frame_container.style.opacity = 0.8;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
@@ -53,12 +50,18 @@
         frame_container.style.bottom = "";
         frame_container.style.top = "20px";
         frame.display = "block";
+        
+        frame_container.style.width = body_width + "px";
+        frame_container.style.height = body_height + "px";
     }
     
     function prepareFrameContainerCollapsed(){
         frame_container.style.top = "";
         frame_container.style.bottom = "20px";
         frame.display = "none";
+        
+        frame_container.style.width = body_width + "200px";
+        frame_container.style.height = body_height + "200px";
     }
     
     function init(){
