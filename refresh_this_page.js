@@ -7,6 +7,37 @@
         body_height = body_info.height;
     
     var frame_container = document.createElement("div");
+    var button_container = document.createElement("div");
+    var cross_toggle_button =  document.createEelement("button"); cross_toggle_button.appendChild(document.createTextNode("TogglE"));
+    var frame = document.createElement("iframe");
+    
+    // Setup elements
+    document.body.appendChild(frame_container);
+    frame_container.appendChild(button_container);
+    frame_container.appendChild(frame);
+    button_container.appendChild(cross_toggle_button);
+    
+    function prepareFrameContainerFull(frame_container){
+        // set z index
+        frame_container.style.width = "100%"; //body_width;
+        frame_container.style.height = "100%"; //body_height;
+        frame_container.style.opacity = 0.5;
+        frame_container.style.margin = "20px";
+        frame_container.style.padding = "15px";
+        // position
+        frame_container.style.position = "fixed";
+        frame_container.style.top = "20px";
+    }
+    
+    function prepareFrameContainerCollapsed(frame_container){
+        frame_container.style.width = body_width;
+        frame_container.style.height = body_height;
+        frame_container.style.opacity = 0.5;
+        frame_container.style.margin = "20px";
+        frame_container.style.padding = "15px";
+    }
+    
+    
     
     
     
