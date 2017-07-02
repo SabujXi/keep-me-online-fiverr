@@ -54,12 +54,12 @@
         button_container.style.margin = "5px";
     // prepare frame
         frame.style.width = "100%";
-        frame.style.height =  body_height - BUTTON_CONTAINER_HEIGHT; // "100%";
+        frame.style.height =  (body_height - BUTTON_CONTAINER_HEIGHT) + "px"; // "100%";
     
     function prepareFrameContainerFull(){
         // position
         frame_container.style.bottom = "";
-        frame_container.style.top = CONTAINER_TOP_OFFSET;
+        frame_container.style.top = CONTAINER_TOP_OFFSET + "px";
         frame.style.display = "block";
         
         frame_container.style.width = body_width + "px";
