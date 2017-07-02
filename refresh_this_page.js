@@ -23,10 +23,10 @@
     function containerStateToggler(){
         if (toggled_full === true){
             prepareFrameContainerCollapsed();
-            toggled_full === false;
+            toggled_full == false;
         }else{
             prepareFrameContainerFull();
-            toggled_full === true;
+            toggled_full == true;
         }
     }
     // Toggle controller
