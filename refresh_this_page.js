@@ -5,6 +5,7 @@
     var body_info = document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
     var body_width = body_info.widht,
         body_height = body_info.height;
+    console.log(body_info);
     // Toggle Status
     var toggled_full = true;
     
@@ -34,7 +35,9 @@
         // position
         frame_container.style.position = "fixed";
         frame_container.style.width = "100%"; //body_width;
+        frame_container.style.minWidth = "500px";
         frame_container.style.height = "100%"; //body_height;
+        frame_container.style.minHeight = "500px";
         frame_container.style.opacity = 0.5;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
