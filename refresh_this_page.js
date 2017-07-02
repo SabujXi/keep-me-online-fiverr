@@ -54,7 +54,7 @@
         button_container.style.margin = "5px";
     // prepare frame
         frame.style.width = "100%";
-        frame.style.height = "100%";
+        frame.style.height =  body_height - BUTTON_CONTAINER_HEIGHT; // "100%";
     
     function prepareFrameContainerFull(){
         // position
