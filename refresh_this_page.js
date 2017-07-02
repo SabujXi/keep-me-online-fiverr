@@ -42,7 +42,7 @@
         // position
         frame_container.style.position = "fixed";
     
-        frame_container.style.opacity = 0.8;
+        frame_container.style.opacity = 1;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
         frame_container.style.overflowX = "hide";
