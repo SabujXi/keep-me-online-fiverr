@@ -14,7 +14,7 @@
     
     var frame_container = document.createElement("div");
     var button_container = document.createElement("div");
-    var cross_toggle_button =  document.createElement("button"); cross_toggle_button.appendChild(document.createTextNode("TogglE"));
+    var cross_toggle_button =  document.createElement("button"); cross_toggle_button.appendChild(document.createTextNode("Minimize"));
     var frame = document.createElement("iframe");
     
     // Setup elements
@@ -27,10 +27,12 @@
         if (toggled_full === true){
             prepareFrameContainerCollapsed();
             toggled_full = false;
+            cross_toggle_button.innerText = "Expand";
             console.log("Collapsed");
         }else{
             prepareFrameContainerFull();
             toggled_full = true;
+            cross_toggle_button.innerText = "Minimize";
             console.log("Full-ed");
         }
     }
