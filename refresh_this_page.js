@@ -54,6 +54,8 @@
     
     function init(){
         frame.setAttribute("src", url);
+        prepareFrameContainerFull();
+        
     }    
     
     // refresh
