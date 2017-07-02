@@ -59,15 +59,18 @@
         frame.setAttribute("src", url);
         prepareFrameContainerFull();
         
-    }    
+        
+        // refresh
+        setInterval(function(){
+            console.log("Reloading the page");
+            // location.reload();
+            frame.setAttribute("src", "");
+            frame.setAttribute("src", url);
+            console.log("Reloaded?!");
+        }, interval_min * 60 * 1000);
+    }
     
-    // refresh
-    setInterval(function(){
-        console.log("Reloading the page");
-        // location.reload();
-        frame.setAttribute("src", "");
-        frame.setAttribute("src", url);
-        console.log("Reloaded?!");
-    }, interval_min * 60 * 1000);
+    init();
+    
 })(2 /* the interval of refeshing in minutes */,
   "https://www.fiverr.com/users/username/manage_gigs");
