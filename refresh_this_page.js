@@ -45,6 +45,7 @@
         frame_container.style.padding = "15px";
         frame_container.style.overflowX = "scroll";
         frame_container.style.overflowY = "scroll";
+        frame_container.style.border = "2px dotted red";
     // prepare frame
         frame.style.width = "100%";
         frame.style.height = "100%";
