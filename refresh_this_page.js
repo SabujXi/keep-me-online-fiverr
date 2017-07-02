@@ -1,12 +1,13 @@
 (function (interval_min, url){
     // Constants
-    var CONTAINER_TOP_OFFSET = 100;
+    var CONTAINER_TOP_OFFSET = 30;
     var CONTAINER_MARGIN = 20,
-        CONTAINER_PADDING = 10;
+        CONTAINER_PADDING = 10,
+        BUTTON_CONTAINER_HEIGHT = 30;
     // Due to cross origin policy some site will not allow iframing - so we will create an iframe inside the same page.
     var body_info = {width: screen.availWidth, height: screen.availHeight }; // document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
     var body_width = body_info.width - CONTAINER_MARGIN - CONTAINER_PADDING - 20,
-        body_height = body_info.height - CONTAINER_MARGIN - CONTAINER_PADDING - CONTAINER_TOP_OFFSET - 20;
+        body_height = body_info.height - CONTAINER_MARGIN - CONTAINER_PADDING - CONTAINER_TOP_OFFSET - BUTTON_CONTAINER_HEIGHT - 20;
     console.log(body_info);
     // Toggle Status
     var toggled_full = true;
@@ -48,6 +49,9 @@
         frame_container.style.overflowX = "hide";
         frame_container.style.overflowY = "hide";
         frame_container.style.border = "2px dotted red";
+    
+        button_container.style.height = BUTTON_CONTAINER_HEIGHT + "px";
+        button_container.style.margin = "5px";
     // prepare frame
         frame.style.width = "100%";
         frame.style.height = "100%";
@@ -55,7 +59,7 @@
     function prepareFrameContainerFull(){
         // position
         frame_container.style.bottom = "";
-        frame_container.style.top = "20px";
+        frame_container.style.top = CONTAINER_TOP_OFFSET;
         frame.style.display = "block";
         
         frame_container.style.width = body_width + "px";
