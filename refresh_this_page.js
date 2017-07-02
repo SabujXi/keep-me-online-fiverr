@@ -7,7 +7,7 @@
     // Due to cross origin policy some site will not allow iframing - so we will create an iframe inside the same page.
     var body_info = {width: screen.availWidth, height: screen.availHeight }; // document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
     var body_width = body_info.width - (CONTAINER_MARGIN * 2) - (CONTAINER_PADDING * 2) - 20,
-        body_height = body_info.height - (CONTAINER_MARGIN * 2) - (CONTAINER_PADDING * 2) - CONTAINER_TOP_OFFSET - BUTTON_CONTAINER_HEIGHT - 20;
+        body_height = body_info.height - (CONTAINER_MARGIN * 2) - (CONTAINER_PADDING * 2) - CONTAINER_TOP_OFFSET - BUTTON_CONTAINER_HEIGHT - 20 - 50;
     console.log(body_info);
     // Toggle Status
     var toggled_full = true;
