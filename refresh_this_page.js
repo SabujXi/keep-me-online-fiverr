@@ -60,8 +60,8 @@
         frame_container.style.bottom = "20px";
         frame.display = "none";
         
-        frame_container.style.width = body_width + "200px";
-        frame_container.style.height = body_height + "200px";
+        frame_container.style.width = "200px";
+        frame_container.style.height = "200px";
     }
     
     function init(){
