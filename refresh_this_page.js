@@ -49,6 +49,7 @@
         frame_container.style.overflowX = "hide";
         frame_container.style.overflowY = "hide";
         frame_container.style.border = "2px dotted red";
+        frame_container.style.backgroundColor = "rgba(255, 240, 245, 0.5)";
     
         button_container.style.height = BUTTON_CONTAINER_HEIGHT + "px";
         button_container.style.margin = "5px";
