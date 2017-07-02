@@ -25,6 +25,7 @@
             prepareFrameContainerCollapsed();
         }else{
             prepareFrameContainerFull();
+            toggled_full === false;
         }
     }
     // Toggle controller
@@ -49,7 +50,7 @@
         // position
         frame_container.style.bottom = "";
         frame_container.style.top = "20px";
-        frame.display = "block";
+        frame.style.display = "block";
         
         frame_container.style.width = body_width + "px";
         frame_container.style.height = body_height + "px";
@@ -58,7 +59,7 @@
     function prepareFrameContainerCollapsed(){
         frame_container.style.top = "";
         frame_container.style.bottom = "20px";
-        frame.display = "none";
+        frame.style.display = "none";
         
         frame_container.style.width = "200px";
         frame_container.style.height = "200px";
