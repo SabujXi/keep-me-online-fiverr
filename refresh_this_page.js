@@ -3,7 +3,7 @@
     var TOP_OFFSET = 100;
     // Due to cross origin policy some site will not allow iframing - so we will create an iframe inside the same page.
     var body_info = {width: screen.width, height: screen.height }; // document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
-    var body_width = body_info.widht,
+    var body_width = body_info.width,
         body_height = body_info.height;
     console.log(body_info);
     // Toggle Status
