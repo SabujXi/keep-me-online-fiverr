@@ -22,10 +22,11 @@
     
     // Toggle controller
     cross_toggle_button.onclick = function(){
+        
         if (toggled_full === true){
-            prepareFrameContainerFull();
-        }else{
             prepareFrameContainerCollapsed();
+        }else{
+            prepareFrameContainerFull();
         }
     };
     
