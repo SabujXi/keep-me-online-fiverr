@@ -1,10 +1,12 @@
 (function (interval_min, url){
     // Constants
-    var TOP_OFFSET = 100;
+    var CONTAINER_TOP_OFFSET = 100;
+    var CONTAINER_MARGIN = 20,
+        CONTAINER_PADDING = 10;
     // Due to cross origin policy some site will not allow iframing - so we will create an iframe inside the same page.
     var body_info = {width: screen.width, height: screen.height }; // document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
-    var body_width = body_info.width,
-        body_height = body_info.height;
+    var body_width = body_info.width - CONTAINER_MARGIN - CONTAINER_PADDING,
+        body_height = body_info.height - CONTAINER_MARGIN - CONTAINER_PADDING - CONTAINER_TOP_OFFSET;
     console.log(body_info);
     // Toggle Status
     var toggled_full = true;
@@ -43,8 +45,8 @@
         frame_container.style.opacity = 0.8;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
-        frame_container.style.overflowX = "scroll";
-        frame_container.style.overflowY = "scroll";
+        frame_container.style.overflowX = "hide";
+        frame_container.style.overflowY = "hide";
         frame_container.style.border = "2px dotted red";
     // prepare frame
         frame.style.width = "100%";
