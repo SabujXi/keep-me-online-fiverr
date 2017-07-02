@@ -4,9 +4,9 @@
     var CONTAINER_MARGIN = 20,
         CONTAINER_PADDING = 10;
     // Due to cross origin policy some site will not allow iframing - so we will create an iframe inside the same page.
-    var body_info = {width: screen.width, height: screen.height }; // document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
-    var body_width = body_info.width - CONTAINER_MARGIN - CONTAINER_PADDING,
-        body_height = body_info.height - CONTAINER_MARGIN - CONTAINER_PADDING - CONTAINER_TOP_OFFSET;
+    var body_info = {width: screen.availWidth, height: screen.availHeight }; // document.body.getBoundingClientRect();//document.getElementsByTagName("body")[0].getBoundingClientRect();
+    var body_width = body_info.width - CONTAINER_MARGIN - CONTAINER_PADDING - 20,
+        body_height = body_info.height - CONTAINER_MARGIN - CONTAINER_PADDING - CONTAINER_TOP_OFFSET - 20;
     console.log(body_info);
     // Toggle Status
     var toggled_full = true;
