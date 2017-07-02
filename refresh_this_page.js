@@ -38,7 +38,7 @@
         frame_container.style.minWidth = "500px";
         frame_container.style.height = "100%"; //body_height;
         frame_container.style.minHeight = "500px";
-        frame_container.style.opacity = 0.1;
+        frame_container.style.opacity = 0.8;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
     
