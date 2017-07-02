@@ -28,36 +28,40 @@
         }
     };
     
-    function prepareFrameContainerFull(){
+    // preparing the frame container
         // set z index
+        frame_container.style.zIndex = 500;
+        // position
+        frame_container.style.position = "fixed";
         frame_container.style.width = "100%"; //body_width;
         frame_container.style.height = "100%"; //body_height;
         frame_container.style.opacity = 0.5;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
+    
+    function prepareFrameContainerFull(){
         // position
-        frame_container.style.position = "fixed";
+        frame_container.style.bottom = "";
         frame_container.style.top = "20px";
+        frame.display = "block";
     }
     
     function prepareFrameContainerCollapsed(){
-        frame_container.style.width = body_width;
-        frame_container.style.height = body_height;
-        frame_container.style.opacity = 0.5;
-        frame_container.style.margin = "20px";
-        frame_container.style.padding = "15px";
+        frame_container.style.top = "";
+        frame_container.style.bottom = "20px";
+        frame.display = "none";
     }
     
+    function init(){
+        frame.setAttribute("src", url);
+    }    
     
-    
-    
-    
-    frame.setAttribute("src", url);
-    
-    
-    setTimeout(function(){
+    // refresh
+    setInterval(function(){
         console.log("Reloading the page");
-        location.reload();
+        // location.reload();
+        frame.setAttribute("src", "");
+        frame.setAttribute("src", url);
         console.log("Reloaded?!");
     }, interval_min * 60 * 1000);
 })(2 /* the interval of refeshing in minutes */,
