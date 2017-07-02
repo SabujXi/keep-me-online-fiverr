@@ -24,9 +24,11 @@
         if (toggled_full === true){
             prepareFrameContainerCollapsed();
             toggled_full == false;
+            console.log("Collapsed");
         }else{
             prepareFrameContainerFull();
             toggled_full == true;
+            console.log("Full-ed");
         }
     }
     // Toggle controller
@@ -63,7 +65,7 @@
         frame.style.display = "none";
         
         frame_container.style.width = "200px";
-        frame_container.style.height = "200px";
+        frame_container.style.height = "100px";
     }
     
     function init(){
