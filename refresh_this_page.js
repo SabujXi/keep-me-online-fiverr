@@ -31,7 +31,7 @@
     
     // preparing the frame container
         // set z index
-        frame_container.style.zIndex = 500;
+        frame_container.style.zIndex = 999999;
         // position
         frame_container.style.position = "fixed";
         frame_container.style.width = body_width + "px"; //"100%"; //body_width;
@@ -41,6 +41,8 @@
         frame_container.style.opacity = 0.8;
         frame_container.style.margin = "20px";
         frame_container.style.padding = "15px";
+        frame_container.style.overflowX = "scroll";
+        frame_container.style.overflowY = "scroll";
     
     function prepareFrameContainerFull(){
         // position
