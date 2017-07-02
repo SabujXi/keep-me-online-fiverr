@@ -10,7 +10,7 @@
     
     var frame_container = document.createElement("div");
     var button_container = document.createElement("div");
-    var cross_toggle_button =  document.createEelement("button"); cross_toggle_button.appendChild(document.createTextNode("TogglE"));
+    var cross_toggle_button =  document.createElement("button"); cross_toggle_button.appendChild(document.createTextNode("TogglE"));
     var frame = document.createElement("iframe");
     
     // Setup elements
