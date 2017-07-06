@@ -95,5 +95,5 @@
     
     init();
     
-})(2 /* the interval of refeshing in minutes */,
+})(7 /* the interval of refeshing in minutes */,
   "https://www.fiverr.com/users/username/manage_gigs");
